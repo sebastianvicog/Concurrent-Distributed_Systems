@@ -1,14 +1,10 @@
-package es.ujaen.ssccdd.curso2023_24.Descentralized_Agreement_System;
+package es.ujaen.ssccdd.curso2023_24;
 
-
-import es.ujaen.ssccdd.curso2023_24.Descentralized_Agreement_System.Constantes;
-import es.ujaen.ssccdd.curso2023_24.Descentralized_Agreement_System.Decision;
-import es.ujaen.ssccdd.curso2023_24.Descentralized_Agreement_System.Nodo;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+/*
 public class Sesion1 {
     public static void main(String[] args) {
         // Declarar variables
@@ -74,3 +70,4 @@ public class Sesion1 {
         System.out.println("\nHa finalizado la ejecución del Hilo(PRINCIPAL)");
     }
 }
+*/

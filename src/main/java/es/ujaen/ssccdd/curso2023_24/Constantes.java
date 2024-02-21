@@ -1,4 +1,4 @@
-package es.ujaen.ssccdd.curso2023_24.Descentralized_Agreement_System;
+package es.ujaen.ssccdd.curso2023_24;
 
 import java.util.Random;
 
@@ -25,10 +25,10 @@ public interface Constantes {
             int indice = 0;
             int peso = aleatorio.nextInt(D100);
 
-            while( (indice < listaCategorias.length) && (resultado == null) ) {
-                suma += listaCategorias[indice].peso;
+            while( (indice < estadosDecision.length) && (resultado == null) ) {
+                suma += estadosDecision[indice].peso;
                 if( suma > peso )
-                    resultado = listaCategorias[indice];
+                    resultado = estadosDecision[indice];
 
                 indice++;
             }
@@ -59,10 +59,10 @@ public interface Constantes {
             int indice = 0;
             int peso = aleatorio.nextInt(D100);
 
-            while( (indice < listaComportamientos.length) && (resultado == null) ) {
-                suma += listaComportamientos[indice].peso;
+            while( (indice < comportamientosPosibles.length) && (resultado == null) ) {
+                suma += comportamientosPosibles[indice].peso;
                 if( suma > peso )
-                    resultado = listaComportamientos[indice];
+                    resultado = comportamientosPosibles[indice];
 
                 indice++;
             }
@@ -79,14 +79,14 @@ public interface Constantes {
         }
     }
     int D100 = 100; // Para una tirada aleatoria de probabilidad
-    EstadoConsenso[] listaCategorias = EstadoConsenso.values();
-    Comportamiento[] listaComportamientos = Comportamiento.values();
+    EstadoConsenso[] estadosDecision = EstadoConsenso.values();
+    Comportamiento[] comportamientosPosibles = Comportamiento.values();
+    int FALLOS_AVANCE =3;
+    int REDUCCION_UMBRAL = 10; // 10% de reducción en el umbral
 
-    //CONSTANTES NECESARIAS AÑADIDAS
-    int MIN_NUM_NODOS = 6;
-    int MAX_NUM_NODOS = 8;
-    double UMBRAL_MINIMO = 0.8;
-    int MIN_NUM_CICLOS = 10;
-    int MAX_NUM_CICLOS = 20;
-    double REDUCCION_UMBRAL = 0.10;
+    int MAX_DECISIONES = 10; // Máximo de decisiones permitidas
+    int MIN_CICLOS = 5; // Mínimo de ciclos permitidos para crear una decisión
+    int MAX_CICLOS = 10; // Máximo de ciclos permitidos para crear una decisión
+
+    int INTERVALO_REDUCCION_UMBRAL = 10; // Intervalo para reducir el umbral en un 10%
 }
